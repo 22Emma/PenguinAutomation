@@ -36,7 +36,7 @@ public class BrowserUtils {
     public static void switchWindowAndVerify( String expectedInUrl, String expectedInTitle){
         // i made the method static so i can call it from the class name easily
 
-        Set<String> allWindowHandles=Driver.getDriver().getWindowHandles();
+        Set<String> allWindowHandles= Driver.getDriver().getWindowHandles();
 
         for (String each : allWindowHandles) {
             Driver.getDriver().switchTo().window(each);// switches// to each window one by one
@@ -48,7 +48,7 @@ public class BrowserUtils {
         }
 
         //5. Assert: Title contains “Etsy”
-        String actualTitle=Driver.getDriver().getTitle();
+        String actualTitle= Driver.getDriver().getTitle();
 
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
     }
@@ -70,7 +70,7 @@ public class BrowserUtils {
 
 
     public static void verifyTitleContains(String expectedTitle){
-        String actualTitle=Driver.getDriver().getTitle();
+        String actualTitle= Driver.getDriver().getTitle();
         Assert.assertTrue(actualTitle.contains(expectedTitle));
        // Assert.assertTrue(Driver.getDriver().getTitle().contains(expectedTitle)); another way too
     }
