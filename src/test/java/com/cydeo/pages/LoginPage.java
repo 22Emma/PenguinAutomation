@@ -24,5 +24,15 @@ public class LoginPage {
     @FindBy(xpath = "//span[.='POSManager34']")
     public WebElement posProfileName;
 
+    @FindBy(xpath = "//span[.='SalesManager56']")
+    public WebElement salesProfileName;
 
+    @FindBy(xpath = "//p[normalize-space(.)='Wrong login/password']")
+    public WebElement wrongInputText;
+
+    @FindBy(xpath = "//div[.='Congratulations, your inbox is empty']")
+    public WebElement dashboardMessage;
+
+    @FindBy(xpath = "//title[.='Login | Best solution for startups']")
+    public WebElement loginPageTitle;
 }

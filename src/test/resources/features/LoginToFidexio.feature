@@ -5,7 +5,7 @@ Feature: Login to Fidexio
   Background:
     Given user is on the fidexio login  page
 
-  @wip
+
   Scenario: Pos manager is on login page
   AC1: user can login with valid credentials (posmanager)
     When user(pos) enters "posmanager34@info.com" and "posmanager" as credentials
@@ -26,11 +26,12 @@ Feature: Login to Fidexio
     And user clicks to login button
     Then user should see the "Wrong login/password" message on the login page after providing invalid credentials
 
+  @wip
     Scenario:
     AC3: "Please fill out this field" message should be displayed if the password or username is empty
-      When the user submits the login button without providing any username or password
+      When the user submits the login button without providing any "jojttyty" username or "" password
       And user clicks to login button
-      Then user should see the "Please fill out this field" text on the login page after not providing any credentials
+      Then user should see the "Please fill out this field." text on the login page after not providing any credentials
 
   Scenario:
   AC4:User land on the ‘reset password’ page after clicking on the "Reset password" link
@@ -42,8 +43,9 @@ Feature: Login to Fidexio
     When user enters "salesmanager" as password
     Then user should see the passoword in bullet signs by default
 
+
   Scenario:
   AC6: Verify if the ‘Enter’ key of the keyboard is working correctly on the login page.
     When  user enters "posmanager34@info.com" and "posmanager" as credentials to check the enter key
-    And user should press the "Enter" key on the keyboard
+    And user should press the Enter key on the keyboard
     Then user should be logged in to the system
